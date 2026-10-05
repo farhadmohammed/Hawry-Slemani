@@ -16,6 +16,7 @@ import {
   Check,
   ArrowUpLeft,
   Phone,
+  Globe,
 } from 'lucide-react';
 
 // Custom TikTok SVG Icon with crisp vector paths
@@ -98,6 +99,19 @@ const SOCIAL_LINKS: SocialLink[] = [
     hoverGlow: 'group-hover:shadow-[0_0_35px_-5px_rgba(16,185,129,0.4)]',
     hoverGradient: 'from-emerald-500/20 via-green-500/10 to-teal-500/5',
     accentColor: 'group-hover:text-emerald-300',
+  },
+  {
+    id: 'main-website',
+    title: 'لقی سەرەکی کارگەی HAWRY - زاخۆ',
+    subtitle: 'وێبسایتی سەرەکی بڕاندی هەوری',
+    handle: 'HAWRY BRAND',
+    url: 'https://chapchaplin.github.io/HAWRY-BRAND/',
+    icon: <Globe className="w-6 h-6 text-white" />,
+    iconBg: 'bg-gradient-to-tr from-amber-600 via-yellow-500 to-emerald-500 shadow-lg shadow-amber-500/30',
+    hoverBorder: 'group-hover:border-amber-400/60',
+    hoverGlow: 'group-hover:shadow-[0_0_35px_-5px_rgba(245,158,11,0.4)]',
+    hoverGradient: 'from-amber-500/20 via-yellow-500/10 to-emerald-500/5',
+    accentColor: 'group-hover:text-amber-300',
   },
 ];
 
@@ -327,7 +341,10 @@ export default function App() {
           transition={{ duration: 0.55, delay: 0.18 }}
           className="mt-2.5 text-base sm:text-lg font-medium text-emerald-100/90 text-center max-w-xs sm:max-w-sm leading-relaxed"
         >
-          بۆ فرۆشتنی cosmetic و دەرمانی سروشتی و گیایی
+          <span>بۆ فرۆشتنی cosmetic و دەرمانی سروشتی و گیایی</span>
+          <span className="block mt-1.5 text-xs sm:text-sm font-semibold bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 bg-clip-text text-transparent drop-shadow-[0_1px_8px_rgba(251,191,36,0.35)]">
+            ( نوێنەری کارگەی هەوری لە سلێمانی )
+          </span>
         </motion.p>
 
         {/* 5. Address as a Small Badge under the name with MapPin Icon */}
@@ -380,7 +397,7 @@ export default function App() {
                   </motion.div>
 
                   <div className="flex flex-col text-right min-w-0">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center flex-wrap gap-2">
                       <span
                         className={`text-base sm:text-lg font-bold text-white ${item.accentColor} transition-colors duration-300`}
                       >
@@ -388,7 +405,7 @@ export default function App() {
                       </span>
                       <span
                         dir="ltr"
-                        className="text-xs font-mono text-slate-400 group-hover:text-slate-200 bg-black/30 px-2 py-0.5 rounded-md border border-white/5 transition-colors"
+                        className="text-xs font-mono text-slate-400 group-hover:text-slate-200 bg-black/30 px-2 py-0.5 rounded-md border border-white/5 transition-colors shrink-0"
                       >
                         {item.handle}
                       </span>
