@@ -1,0 +1,6 @@
+{
+  "name": "HAWRY - Cosmetics & Natural Remedies",
+  "description": "HAWRY - بۆ فرۆشتنی کۆزمێتیک و دەرمانی سروشتی و گیایی لە سلێمانی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
