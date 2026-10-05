@@ -22,8 +22,68 @@
   }
 }
 
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+@keyframes floatSmall {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale3d(1.2, 1.2, 1);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.04, 1.04, 1);
+  }
+}
+
 .animate-shimmer {
   background-size: 200% auto;
-  animation: shimmer 3.5s linear infinite;
+  animation: shimmer 4s linear infinite;
 }
+
+.animate-float-slow {
+  animation: floatSlow 3.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-small {
+  animation: floatSmall 2.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-twinkle {
+  animation: twinkle var(--twinkle-duration, 3.5s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+  will-change: transform, opacity;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.4s ease-in-out infinite;
+  will-change: transform;
+}
+
 
